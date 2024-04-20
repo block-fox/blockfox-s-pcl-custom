@@ -1,0 +1,66 @@
+﻿<local:MyCard Title="常用网页" Margin="0,0,0,15" CanSwap="True" IsSwaped="True">
+	<StackPanel Margin="25,40,23,15">
+        <TextBlock TextWrapping="Wrap" Margin="0,0,0,4"
+	Text="这里包含一些常用网站，包括百科,mod与视频网站" />
+		<local:MyListItem  Margin="-5,2,-5,8"
+                		Logo="https://www.mcmod.cn/images/logo.gif" Title="MC百科" Info="提供Minecraft(我的世界)MOD(模组)物品资料介绍教程攻略和MOD下载。" 
+			EventType="打开网页" EventData="https://www.mcmod.cn/" Type="Clickable"/>
+		<local:MyListItem  Margin="-5,2,-5,8"
+			Logo="https://www.bilibili.com/favicon.ico" Title="Bilibili" Info="哔哩哔哩（bilibili.com)是国内知名的视频弹幕网站，这里有及时的动漫新番，活跃的ACG氛围，有创意的Up主。" 
+			EventType="打开网页" EventData="https://www.bilibili.com" Type="Clickable"/>
+		<local:MyListItem  Margin="-5,2,-5,8"
+			Logo="https://www.mcbbs.net/favicon.ico" Title="MCBBS" Info="MCBBS（我的世界中文论坛） 是最大的中文《Minecraft》（我的世界）玩家创造、研究、交流学习和分享的专业中文社交平台。" 
+			EventType="打开网页" EventData="https://www.mcbbs.net" Type="Clickable"/>
+		<local:MyListItem  Margin="-5,2,-5,8"
+                		Logo="https://zh.minecraft.wiki/favicon.ico" Title="MCWIKI" Info="欢迎来到这个完全公开、可自由编辑的Wiki，中文Minecraft Wiki。这里致力于收集一切和Minecraft有关的信息。" 
+			EventType="打开网页" EventData="https://zh.minecraft.wiki/" Type="Clickable"/>
+		<local:MyListItem  Margin="-5,2,-5,8"
+                		Logo="https://www.chunkbase.com/favicon.ico" Title="Seed Map" Info="非常实用的国外种子地图网站" 
+			EventType="打开网页" EventData="https://www.chunkbase.com" Type="Clickable"/>
+            		<local:MyListItem  Margin="-5,2,-5,8"
+                		Logo="pack://application:,,,/images/Blocks/GrassPath.png" Title="LittleSkin" Info="快速、可靠的公益 Minecraft 皮肤站" 
+			EventType="打开网页" EventData="https://littleskin.cn/auth/login" Type="Clickable"/>
+		<local:MyListItem  Margin="-5,2,-5,8"
+                		Logo="pack://application:,,,/images/Blocks/GoldBlock.png" Title="红石皮肤站" Info="一个免费、自由的Minecraft皮肤站。四年历史，稳定可靠！" 
+			EventType="打开网页" EventData="https://mcskin.cn/auth/login" Type="Clickable"/>
+		<local:MyListItem  Margin="-5,2,-5,8"
+                		Logo="https://www.planetminecraft.com/favicon.ico" Title="Planet minecraft" Info="是一个拥有丰富《我的世界》游戏素材、纹理包、存档、皮肤、Mods、地图资源的分享站点。" 
+			EventType="打开网页" EventData="https://www.planetminecraft.com/" Type="Clickable"/>
+		<local:MyListItem  Margin="-5,2,-5,8"
+                		Logo="pack://application:,,,/images/Blocks/Grass.png" Title="PCL II" Info="PCL II 正式版下载地址" EventType="打开网页" EventData="https://afdian.net/p/0164034c016c11ebafcb52540025c377" Type="Clickable"/>
+	</StackPanel>
+</local:MyCard>
+
+<local:MyCard Title="欢迎与更多" Margin="0,0,0,15" CanSwap="True" IsSwaped="false">
+	<StackPanel Margin="25,40,23,15">
+                    <TextBlock Margin="5,0,5,12" TextWrapping="Wrap" HorizontalAlignment="Center" Foreground="{DynamicResource ColorBrush1}" Text="{cave}" />
+		<StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+		<Calendar HorizontalAlignment="Center" Margin="0,12,0,10" Grid.Column="0"/>
+		</StackPanel>
+		<StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+			<local:MyButton Margin="0,0,10,10" Width="200" Height="35" HorizontalAlignment="Center" Padding="13,0,13,0" ColorType="Highlight" Text="重新加载" EventType="刷新主页" ToolTip="刷新主页及回声洞。" EventData="回声洞" />
+			<local:MyButton Margin="0,0,0,10" Width="200" Height="35" HorizontalAlignment="Center" Padding="13,0,13,0" ColorType="Highlight" Text="清理垃圾" EventType="清理垃圾" ToolTip="清理垃圾文件。" />
+		</StackPanel>
+		<StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+		<local:MyButton Margin="0,0,10,10" Width="200" Height="35" HorizontalAlignment="Center" Padding="13,0,13,0" ColorType="Highlight" Text="内存优化" EventType="内存优化" ToolTip="将物理内存占用降低约1/3，不仅限于MC！&#xA;如果使用机械硬盘，这可能会导致一小段时间的严重卡顿。"/>
+		<local:MyButton Margin="0,0,0,10" Width="200" Height="35" HorizontalAlignment="Center" Padding="13,0,13,0" ColorType="Highlight" Text="今日人品" EventType="今日人品" />
+		</StackPanel>
+		<local:MyHint Margin="0,10,0,2" IsWarn="false" Text="由Letter_blackfox制作。（不要忘记我！）" />
+	</StackPanel>  
+</local:MyCard>
+
+<local:MyCard Margin="0,0,0,12" Title="下载器" CanSwap="True" IsSwaped="True">
+    <StackPanel Margin="24,40,24,15">
+        <local:MyHint Margin="0,0,0,10" IsWarn="True" Text="链接必须为以http://或https://开头的网址，部分网址可能无法下载" />
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="3*" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+            <TextBlock Margin="0,7,0,0" Text="下载链接：" Grid.Column="0" FontSize="13"/>
+            <local:MyTextBox Margin="-5,0,0,0" Name="web" Height="30" Grid.Column="1"/>
+            <local:MyButton EventType="下载文件" EventData="{Binding ElementName=web,Path=Text}" Text="开始下载" Margin="5,0,0,0" Height="30" Grid.Column="2" Padding="2,0,2,0" ColorType="Highlight"/>
+        </Grid>
+    </StackPanel>  
+</local:MyCard>
