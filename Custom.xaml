@@ -1,18 +1,52 @@
-﻿<local:MyCard Title="常用网页" Margin="0,0,0,15" CanSwap="True" IsSwaped="True">
+﻿<local:MyCard Title="欢迎与更多" Margin="0,0,0,15" CanSwap="True" IsSwaped="false">
+	<StackPanel Margin="25,40,23,15">
+		<TextBlock TextWrapping="Wrap" Margin="-5,0,0,20" Text="如果你感到迷茫的话不妨听听回声洞会说些什么：" FontSize="10" Foreground="#808080"/>
+        <TextBlock Margin="5,0,5,12" TextWrapping="Wrap" HorizontalAlignment="Center" Foreground="{DynamicResource ColorBrush1}" Text="{cave}" FontSize="15"/>
+		<StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+		<Calendar HorizontalAlignment="Center" Margin="0,12,0,10" Grid.Column="0"/>
+		</StackPanel>
+		<Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" /> 
+            </Grid.ColumnDefinitions>
+            <local:MyButton Grid.Column="0" Margin="0,5,6,5" Height="30" ColorType="Highlight"
+                        Text="重新加载" EventType="刷新主页" ToolTip="刷新主页及回声洞。" EventData="回声洞" />
+            <local:MyButton Grid.Column="1" Margin="0,5,6,5" Height="30" ColorType="Highlight"
+                        Text="进百宝箱" EventType="切换页面" EventData="4|2" ToolTip="打开pcl自带的百宝箱，发现更多有趣内容！"/>
+		</Grid>				
+			<Grid>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="1*"/>
+				<ColumnDefinition Width="1*"/>
+			</Grid.ColumnDefinitions>
+			<local:MyButton Grid.Column="0" Margin="0,5,6,5" Height="30" ColorType="Highlight"
+                        Text="内存优化" EventType="内存优化" ToolTip="将物理内存占用降低约1/3，不仅限于MC！&#xA;如果使用机械硬盘，这可能会导致一小段时间的严重卡顿。" />
+			<local:MyButton Grid.Column="1" Margin="0,5,6,5" Height="30" ColorType="Highlight"
+						Text="进个性化" EventType="切换页面" EventData="3|1" ToolTip="打开pcl的个性化页面，切换主题！"/>	
+			</Grid>
+			<local:MyHint Margin="0,10,0,2" IsWarn="false" Text="本主页由Letter_blackfox制作。"/>
+		
+	</StackPanel>  
+</local:MyCard>
+
+<local:MyCard Title="常用网页" Margin="0,0,0,15" CanSwap="True" IsSwaped="True">
 	<StackPanel Margin="25,40,23,15">
         <TextBlock TextWrapping="Wrap" Margin="0,0,0,4"
 	Text="这里包含一些常用网站，包括百科,mod与视频网站" />
+	<TextBlock TextWrapping="Wrap" Margin="0,0,0,4"
+	Text="部分图标取自MCNav" />
 		<local:MyListItem  Margin="-5,2,-5,8"
 			Logo="https://www.mcnav.net/favicon.ico" Title="MCNav" Info="MCNav 是一个精致、全面 Minecraft 网址导航站，收录各类型的MC网站。" 
 			EventType="打开网页" EventData="https://www.mcnav.net" Type="Clickable"/>
 		<local:MyListItem  Margin="-5,2,-5,8"
-            Logo="https://www.mcmod.cn/images/logo.gif" Title="MC百科" Info="提供Minecraft(我的世界)MOD(模组)物品资料介绍教程攻略和MOD下载。" 
+            Logo="https://www.mcmod.cn/images/favicon.ico" Title="MC百科" Info="提供Minecraft(我的世界)MOD(模组)物品资料介绍教程攻略和MOD下载。" 
 			EventType="打开网页" EventData="https://www.mcmod.cn/" Type="Clickable"/>
 		<local:MyListItem  Margin="-5,2,-5,8"
 			Logo="https://www.bilibili.com/favicon.ico" Title="Bilibili" Info="哔哩哔哩（bilibili.com)是国内知名的视频弹幕网站，这里有及时的动漫新番，活跃的ACG氛围，有创意的Up主。" 
 			EventType="打开网页" EventData="https://www.bilibili.com" Type="Clickable"/>
 		<local:MyListItem  Margin="-5,2,-5,8"
-			Logo="https://www.minebbs.com/favicon.ico" Title="MineBBS" Info="MineBBS是一个我的世界中文论坛，以基岩版、服务端内容居多。" 
+			Logo="https://www.minebbs.com/data/assets/logo/favicon.webp" Title="MineBBS" Info="MineBBS是一个我的世界中文论坛，以基岩版、服务端内容居多。" 
 			EventType="打开网页" EventData="https://www.minebbs.com" Type="Clickable"/>
 		<local:MyListItem  Margin="-5,2,-5,8"
                 		Logo="https://www.mcnav.net/wp-content/uploads/2021/07/1696391166-Wiki.webp" Title="MCWIKI" Info="欢迎来到这个完全公开、可自由编辑的Wiki，中文Minecraft Wiki。这里致力于收集一切和Minecraft有关的信息。" 
@@ -21,48 +55,272 @@
                 		Logo="https://www.chunkbase.com/favicon.ico" Title="Seed Map" Info="非常实用的国外种子地图网站" 
 			EventType="打开网页" EventData="https://www.chunkbase.com" Type="Clickable"/>
             		<local:MyListItem  Margin="-5,2,-5,8"
-                		Logo="https://www.mcnav.net/wp-content/uploads/2021/07/1627485777-littleskine.png" Title="LittleSkin" Info="快速、可靠的公益 Minecraft 皮肤站" 
-			EventType="打开网页" EventData="https://littleskin.cn/auth/login" Type="Clickable"/>
+                		Logo="https://littleskin.cn/favicon.png" Title="LittleSkin" Info="快速、可靠的公益 Minecraft 皮肤站" 
+			EventType="打开网页" EventData="https://littleskin.cn" Type="Clickable"/>
 		<local:MyListItem  Margin="-5,2,-5,8"
-                		Logo="https://www.mcnav.net/wp-content/uploads/2024/02/20240224133731_84833a9c.png" Title="Celestia Skin" Info="四年历史的皮肤站，长期运营，快如闪电！" 
+                		Logo="https://mcskin.com.cn/app/favicon.ico" Title="Celestia Skin" Info="四年历史的皮肤站，长期运营，快如闪电！" 
 			EventType="打开网页" EventData="https://mcskin.cn/auth/login" Type="Clickable"/>
 		<local:MyListItem  Margin="-5,2,-5,8"
                 		Logo="https://www.mcnav.net/wp-content/uploads/2021/07/1627453946-planetminecraft_logo.png" Title="Planet minecraft" Info="是一个拥有丰富《我的世界》游戏素材、纹理包、存档、皮肤、Mods、地图资源的分享站点。" 
 			EventType="打开网页" EventData="https://www.planetminecraft.com/" Type="Clickable"/>
 		<local:MyListItem  Margin="-5,2,-5,8"
-                		Logo="pack://application:,,,/images/Blocks/Grass.png" Title="PCL II" Info="PCL II 正式版下载地址" EventType="打开网页" EventData="https://afdian.net/p/0164034c016c11ebafcb52540025c377" Type="Clickable"/>
+						Logo="https://bbsmc.net/favicon-light.ico" Title="bbsmc" Info="在 BBSMC 上下载 Minecraft 模组、插件、数据包、光影、资源包和整合包。 通过现代化、易于使用的界面和 API 在 BBSMC 上发现和发布资源。 " 
+			EventType="打开网页" EventData="https://bbsmc.net/" Type="Clickable"/>
+		<local:MyListItem  Margin="-5,2,-5,8"
+							Logo="https://archives.mcbbs.co/favicon.ico" Title="MCBBS（纪念版）" Info="MCBBS纪念版是一个专注于Minecraft（我的世界）的中文论坛，提供游戏下载、教程、资源、创作、分享、活动等内容。 " 
+			EventType="打开网页" EventData="https://www.mcbbs.co/" Type="Clickable"/>
+		<local:MyListItem  Margin="-5,2,-5,8"
+							Logo="https://s2.loli.net/2024/11/21/ZPwBuQxc1jtlqAg.png" Title="MCBBS帖子存档（纪念版）" Info="MCBBS是一个专注于Minecraft（我的世界）的中文论坛，提供游戏下载、教程、资源、创作、分享、活动等内容。 " 
+			EventType="打开网页" EventData="https://archives.mcbbs.co/" Type="Clickable"/>
+		<local:MyListItem  Margin="-5,2,-5,8"
+							Logo="https://mcbbs.rip/assets/icon/favicon.ico" Title="BBSPK" Info="我们在此列出目前可见的我的世界简体中文论坛，记录论坛运行状态，旁观晋级赛现状。" 
+			EventType="打开网页" EventData="https://mcbbs.rip/" Type="Clickable"/>
+		<local:MyListItem  Margin="-5,2,-5,8"
+                		Logo="pack://application:,,,/images/Blocks/Grass.png" Title="PCL II" Info="PCL II 正式版下载地址" EventType="打开网页" EventData="https://afdian.com/p/0164034c016c11ebafcb52540025c377" Type="Clickable"/>
 	</StackPanel>
 </local:MyCard>
+<local:MyCard Margin="0,0,0,12" Title="快速搜索" CanSwap="True" IsSwaped="True">
+    <StackPanel Margin="24,40,24,15">
+		<local:MyHint Text="仅需输入文本，再按按钮即可一键搜索！（不支持回车）&#xA;使用seed map时请在输入框输入种子" Theme="blue"/>
 
-<local:MyCard Title="欢迎与更多" Margin="0,0,0,15" CanSwap="True" IsSwaped="false">
-	<StackPanel Margin="25,40,23,15">
-                    <TextBlock Margin="5,0,5,12" TextWrapping="Wrap" HorizontalAlignment="Center" Foreground="{DynamicResource ColorBrush1}" Text="{cave}" />
-		<StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-		<Calendar HorizontalAlignment="Center" Margin="0,12,0,10" Grid.Column="0"/>
-		</StackPanel>
-		<Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="1*" />
-                <ColumnDefinition Width="1*" /> 
-            </Grid.ColumnDefinitions>
-            <local:MyButton Grid.Column="0" Margin="0,0,10,5" Height="35" ColorType="Highlight"
-                        Text="重新加载" EventType="刷新主页" ToolTip="刷新主页及回声洞。" EventData="回声洞" />
-            <local:MyButton Grid.Column="1" Margin="0,5,10,5" Height="35" ColorType="Highlight"
-                        Text="清理垃圾" EventType="清理垃圾" ToolTip="清理垃圾文件。"/>
-		</Grid>				
-			<Grid>
-			<Grid.ColumnDefinitions>
-				<ColumnDefinition Width="1*"/>
-				<ColumnDefinition Width="1*"/>
-			</Grid.ColumnDefinitions>
-			<local:MyButton Grid.Column="0" Margin="0,5,10,5" Height="35" ColorType="Highlight"
-                        Text="内存优化" EventType="内存优化" ToolTip="将物理内存占用降低约1/3，不仅限于MC！&#xA;如果使用机械硬盘，这可能会导致一小段时间的严重卡顿。" />
-			<local:MyButton Grid.Column="1" Margin="0,5,10,5" Height="35" ColorType="Highlight"
-						Text="今日人品" EventType="今日人品" />	
-			</Grid>
-			<local:MyHint Margin="0,10,0,2" IsWarn="false" Text="由Letter_blackfox制作。" />
+	<Grid Margin="10">
+    <Grid.RowDefinitions>
+        <RowDefinition Height="Auto"/>
 		
-	</StackPanel>  
+        <RowDefinition Height="35"/>
+        <RowDefinition Height="35"/>
+        <RowDefinition Height="35"/>
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*"/>
+		
+        <ColumnDefinition Width="*"/>
+        <ColumnDefinition MinWidth="95" Width="*"/>
+        <ColumnDefinition Width="*"/>
+    </Grid.ColumnDefinitions>
+    <local:MyTextBox
+        x:Name="SearchInput"
+        Grid.Row="0" Grid.ColumnSpan="4"
+        Margin="0,0,0,10"
+        Height="30" ToolTip="请输入文本"/>
+    <local:MyButton
+        Grid.Row="1" Grid.Column="0"
+        Margin="2" Padding="10,0"
+        Text="百度搜索"
+        EventType="打开网页">
+        <local:MyButton.EventData>
+            <MultiBinding StringFormat="https://www.baidu.com/s?wd={0}">
+                <Binding Path="Text" ElementName="SearchInput"/>
+            </MultiBinding>
+        </local:MyButton.EventData>
+    </local:MyButton>
+
+    <local:MyButton
+        Grid.Row="1" Grid.Column="1"
+        Margin="2" Padding="10,0"
+        Text="必应搜索"
+        EventType="打开网页">
+        <local:MyButton.EventData>
+            <MultiBinding StringFormat="https://cn.bing.com/search?q={0}">
+                <Binding Path="Text" ElementName="SearchInput"/>
+            </MultiBinding>
+        </local:MyButton.EventData>
+    </local:MyButton>
+
+    <local:MyButton
+        Grid.Row="1" Grid.Column="2"
+        Margin="2" Padding="10,0"
+        Text="谷歌搜索"
+        EventType="打开网页">
+        <local:MyButton.EventData>
+            <MultiBinding StringFormat="https://www.google.com/search?q={0}">
+                <Binding Path="Text" ElementName="SearchInput"/>
+            </MultiBinding>
+        </local:MyButton.EventData>
+    </local:MyButton>
+
+    <local:MyButton
+        Grid.Row="1" Grid.Column="3"
+        Margin="2" Padding="10,0"
+        Text="MCWIKI"
+        EventType="打开网页">
+        <local:MyButton.EventData>
+            <MultiBinding StringFormat="https://zh.minecraft.wiki/?search={0}">
+                <Binding Path="Text" ElementName="SearchInput"/>
+            </MultiBinding>
+        </local:MyButton.EventData>
+    </local:MyButton>
+    <local:MyButton
+        Grid.Row="2" Grid.Column="0"
+        Margin="2" Padding="10,0"
+        Text="Yahoo"
+        EventType="打开网页">
+        <local:MyButton.EventData>
+            <MultiBinding StringFormat="https://search.yahoo.com/search?p={0}">
+                <Binding Path="Text" ElementName="SearchInput"/>
+            </MultiBinding>
+        </local:MyButton.EventData>
+    </local:MyButton>
+
+    <local:MyButton
+        Grid.Row="2" Grid.Column="1"
+        Margin="2" Padding="10,0"
+        Text="搜狗搜索"
+        EventType="打开网页">
+        <local:MyButton.EventData>
+            <MultiBinding StringFormat="https://www.sogou.com/sogou?query={0}">
+                <Binding Path="Text" ElementName="SearchInput"/>
+            </MultiBinding>
+        </local:MyButton.EventData>
+    </local:MyButton>
+
+    <local:MyButton
+        Grid.Row="2" Grid.Column="2"
+        Margin="2" Padding="10,0"
+        Text="Bilibili"
+        EventType="打开网页">
+        <local:MyButton.EventData>
+            <MultiBinding StringFormat="https://search.bilibili.com/all?keyword={0}">
+                <Binding Path="Text" ElementName="SearchInput"/>
+            </MultiBinding>
+        </local:MyButton.EventData>
+    </local:MyButton>
+
+    <local:MyButton
+        Grid.Row="2" Grid.Column="3"
+        Margin="2" Padding="10,0"
+        Text="MC百科"
+        EventType="打开网页">
+        <local:MyButton.EventData>
+            <MultiBinding StringFormat="https://search.mcmod.cn/s?key={0}">
+                <Binding Path="Text" ElementName="SearchInput"/>
+            </MultiBinding>
+        </local:MyButton.EventData>
+    </local:MyButton>
+    <local:MyButton
+        Grid.Row="3" Grid.Column="0"
+        Margin="2" Padding="10,0"
+        Text="GitHub"
+        EventType="打开网页">
+        <local:MyButton.EventData>
+            <MultiBinding StringFormat="https://github.com/search?q={0}">
+                <Binding Path="Text" ElementName="SearchInput"/>
+            </MultiBinding>
+        </local:MyButton.EventData>
+    </local:MyButton>
+
+    <local:MyButton
+        Grid.Row="3" Grid.Column="1"
+        Margin="2" Padding="10,0"
+        Text="Modrinth"
+        EventType="打开网页">
+        <local:MyButton.EventData>
+            <MultiBinding StringFormat="https://modrinth.com/mods?q={0}">
+                <Binding Path="Text" ElementName="SearchInput"/>
+            </MultiBinding>
+        </local:MyButton.EventData>
+    </local:MyButton>
+
+    <local:MyButton
+        Grid.Row="3" Grid.Column="2"
+        Margin="2" Padding="10,0"
+        Text="CurseForge"
+        EventType="打开网页">
+        <local:MyButton.EventData>
+            <MultiBinding StringFormat="https://www.curseforge.com/minecraft/search?search={0}">
+                <Binding Path="Text" ElementName="SearchInput"/>
+            </MultiBinding>
+        </local:MyButton.EventData>
+    </local:MyButton>
+	
+	<local:MyButton
+        Grid.Row="3" Grid.Column="3"
+        Margin="2" Padding="10,0"
+        Text="seed map"
+        EventType="打开网页" ToolTip="请在输入框输入种子">
+        <local:MyButton.EventData>
+            <MultiBinding StringFormat="https://www.chunkbase.com/apps/seed-map#seed={0}">
+                <Binding Path="Text" ElementName="SearchInput"/>
+            </MultiBinding>
+        </local:MyButton.EventData>
+    </local:MyButton>
+</Grid>
+    </StackPanel>  
+</local:MyCard>
+
+<local:MyCard Title="快捷启动" Margin="0,0,0,15" CanSwap="True" IsSwaped="True">
+    <StackPanel Margin="25,40,23,15">
+        <TextBlock TextWrapping="Wrap" Margin="0,0,0,10"
+                   Text="在下方分别输入游戏版本和服务器地址，点击按钮启动游戏并自动连接服务器" FontSize="13"/>
+
+        <Grid Margin="0,0,0,10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            
+            <local:MyTextBox
+                x:Name="GameVersionInput"
+                Grid.Column="0"
+                Margin="0,0,5,0"
+                Height="30"
+                VerticalAlignment="Center"
+                ToolTip="输入游戏版本（如 1.12.2、1.20.1）"/>
+            
+            <local:MyTextBox
+                x:Name="ServerAddressInput"
+                Grid.Column="1"
+                Margin="5,0,0,0"
+                Height="30"
+                VerticalAlignment="Center"
+                ToolTip="输入服务器 IP（如 mc.hypixel.net）"/>
+        </Grid>
+
+        <Grid Margin="0,0,0,10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <local:MyButton
+				Grid.Column="0"
+                Width="Auto"
+                Height="30"
+                Margin="0,0,5,0"
+                Text="启动并加入/仅启动"
+                EventType="启动游戏"
+				ToolTip="服务器ip可选">
+                <local:MyButton.EventData>
+                    <MultiBinding StringFormat="{}{0}|{1}">
+                        <Binding Path="Text" ElementName="GameVersionInput"/>
+                        <Binding Path="Text" ElementName="ServerAddressInput"/>
+                    </MultiBinding>
+                </local:MyButton.EventData>
+            </local:MyButton>
+            
+            <local:MyButton
+				Grid.Column="1"
+                Width="Auto"
+                Height="30"
+				Margin="5,0,0,0"
+                Text="仅加入服务器"
+                EventType="启动游戏">
+                <local:MyButton.EventData>
+                    <MultiBinding StringFormat="{}\current|{0}">
+                        <Binding Path="Text" ElementName="ServerAddressInput"/>
+                    </MultiBinding>
+                </local:MyButton.EventData>
+            </local:MyButton>
+        </Grid>
+
+        <local:MyHint Theme="blue" Text="示例：左边填 1.20.1，右边填 mc.hypixel.net，点击按钮后将启动 1.20.1 并自动连接 Hypixel。"/>
+	<local:MyCard Title="Minecraft Bedrock Edition" Margin="0,15,0,15" CanSwap="false" IsSwaped="false" >
+              <StackPanel Margin="24,40,24,15">
+    <local:MyHint Margin="0,0,0,10" IsWarn="True" Text="无法打开的时候请检查是否安装了对应的应用"/>
+		<local:MyListItem Margin="-2,0,0,0" Logo="pack://application:,,,/images/Blocks/Grass.png"
+						Title="启动 Minecraft Bedrock (如果安装了的话)" Info="启动 Minecraft 基岩版" EventType="打开网页" EventData="minecraft://" Type="Clickable" />
+</StackPanel>
+		</local:MyCard>
+    </StackPanel>
 </local:MyCard>
 
 <local:MyCard Margin="0,0,0,12" Title="下载器" CanSwap="True" IsSwaped="True">
@@ -80,3 +338,14 @@
         </Grid>
     </StackPanel>  
 </local:MyCard>
+
+<StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+	<local:MyListItem Margin="-2,0,0,0" HorizontalAlignment="Center" Width="200" Height="50"
+		Logo="https://assets.bgithub.xyz/favicons/favicon.png" Title="主页源代码 (GitHub)" Info="block-fox GitHub"
+		EventType="打开网页" EventData="https://github.com/block-fox/blockfox-s-pcl-custom" Type="Clickable" />
+	<local:MyListItem Margin="-2,0,0,0" HorizontalAlignment="center" Width="200" Height="50"
+		Logo="https://raw.gitcode.com/Ad_closeNN/img/blobs/fd55374d7b48368c9aae411ca1424682db4e4005/GitHub.png" Title="参考主页 (GitHub)" Info="Ad-closeNN GitHub"
+		EventType="打开网页" EventData="https://github.com/Ad-closeNN/PCL2-home-page" Type="Clickable" />
+</StackPanel>  
+<TextBlock HorizontalAlignment="right" Margin="0,0,0,12" Foreground="{DynamicResource ColorBrush2}" 
+               FontFamily="OPPO Sans 4.0, HarmonyOS Sans SC, Microsoft YaHei UI, 微软雅黑" Text="Ver 2.0.0 (2025/6/27)" />
